@@ -18,11 +18,11 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 			
-			var geometry = new THREE.SphereGeometry();
+			var geometry = new THREE.SphereGeometry(10, 64, 64);
 			
 			var wireframe = new THREE.WireframeGeometry( geometry );
 
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00cc00 } );
 			var cube = new THREE.Mesh( wireframe, material );
 			scene.add( cube );
 			
