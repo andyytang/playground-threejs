@@ -18,12 +18,10 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 			
-			var geometry = new THREE.SphereGeometry(10, 64, 64);
-			
-			var wireframe = new THREE.WireframeGeometry( geometry );
+			var geometry = new THREE.SphereGeometry(3, 32, 32);
 
 			var material = new THREE.MeshBasicMaterial( { color: 0x00cc00 } );
-			var cube = new THREE.Mesh( wireframe, material );
+			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
