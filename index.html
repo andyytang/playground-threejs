@@ -24,11 +24,10 @@
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			
-			var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+			var light = new THREE.PointLight(0xffffff, 1, 100);
+    			light.position.set(3,3,3);
 			
-			directionalLight.target = cube;
-			
-			scene.add( directionalLight );
+			scene.add( light );
 				
 			camera.position.z = 5;
 			
