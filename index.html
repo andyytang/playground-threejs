@@ -19,8 +19,11 @@
 			document.body.appendChild( renderer.domElement );
 			
 			var geometry = new THREE.SphereGeometry();
+			
+			var wireframe = new THREE.WireframeGeometry( geometry );
+
 			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var cube = new THREE.Mesh( geometry, material );
+			var cube = new THREE.Mesh( wireframe, material );
 			scene.add( cube );
 			
 			camera.position.z = 5;
